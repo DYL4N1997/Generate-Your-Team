@@ -1,12 +1,51 @@
-
+// Create manager
 const createManager = (manager) => {
     console.log(manager);
     return `
-
+    <div class="flex justify-center m-5">
+    <div class="bg-white max-w-sm p-6 card-min-width">
+      <!-- circle -->
+      <div class="flex justify-center pb-5">
+        <div class="card-square-pink">
+          <img
+            class="justify-center"
+            src="....."
+            alt=""
+          />
+        </div>
+      </div>
+      <h5 class="text-black-700 text-xl font-bold mb-2 text-center">
+        ${manager.name}
+      </h5>
+      <p
+        class="text-black bg-blue-400 font-bold mx-5 px-7 text-center"
+      >
+        Manager
+      </p>
+      <!-- container -->
+      <div class="pt-4">
+        <!-- id -->
+        <div class="flex justify-between my-2">
+          <p class="font-bold text-base">ID:</p>
+          <p class="font-bold text-black-700 text-sm pl-8">${manager.id}</p>
+        </div>
+        <!-- email -->
+        <div class="flex justify-between my-2">
+          <p class="font-bold text-base">Email:</p>
+          <p class="font-bold text-black-700 text-sm pl-8">
+          <a href="mailto:${manager.email}">${manager.email}</a>
+          </p>
+        </div>
+        <!-- office number -->
+        <div class="flex justify-between my-2">
+          <p class="font-bold text-base">Office Num:</p>
+          <p class="font-bold text-black-700 text-sm pl-8">${manager.officeNumber}</p>
+        </div>
+      </div>
+    </div>
+    </div>
 `;
 };
-
-
 
 
 // String literal to Generate the Team Page
