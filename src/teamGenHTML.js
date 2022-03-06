@@ -4,7 +4,6 @@ const createManager = (manager) => {
     return `
     <div class="flex justify-center m-5">
     <div class="bg-white max-w-sm p-6 card-min-width">
-      <!-- circle -->
       <div class="flex justify-center pb-5">
         <div class="card-square-pink">
           <img
@@ -51,7 +50,6 @@ const createEngineer = (engineer) => {
     return `
     <div class="flex justify-center m-5">
         <div class="bg-white max-w-sm p-6 card-min-width">
-          <!-- circle -->
           <div class="flex justify-center pb-5">
             <div class="card-square-pink">
               <img
@@ -96,9 +94,73 @@ const createEngineer = (engineer) => {
     `;
 };
 
+const createIntern = (intern) => {
+    return `
+    <div class="flex justify-center m-5">
+        <div class="bg-white max-w-sm p-6 card-min-width">
+          <div class="flex justify-center pb-5">
+            <div class="card-square-pink">
+              <img
+                class="justify-center"
+                src="....."
+                alt=""
+              />
+            </div>
+          </div>
+          <h5 class="text-black-700 text-xl font-bold mb-2 text-center">
+            ${intern.name}
+          </h5>
+          <p
+            class="text-black bg-pink-400 font-bold mx-5 px-7 text-center"
+          >
+            Intern
+          </p>
+          <!-- container -->
+          <div class="pt-4">
+            <!-- id -->
+            <div class="flex justify-between my-2">
+              <p class="font-bold text-base">ID:</p>
+              <p class="font-bold text-black-700 text-sm pl-8">${intern.id}</p>
+            </div>
+            <!-- email -->
+            <div class="flex justify-between my-2">
+              <p class="font-bold text-base">Email:</p>
+              <p class="font-bold text-black-700 text-sm pl-8">
+              <a href="mailto:${intern.email}">${intern.email}</a>
+              </p>
+            </div>
+            <!-- office number -->
+            <div class="flex justify-between my-2">
+              <p class="font-bold text-base">School:</p>
+              <p class="font-bold text-black-700 text-sm pl-8">
+                  ${intern.school}
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+};
+
+teamGenHTML = (employee) => {
+  EmployeeArray = [];
+  for (let i =0; 1< employee.length; i++) {
+    const role = employee.obtainTitle();
+    
+    if (title === "Manager") {
+      const managerCard = createManager(employee);
+      EmployeeArray.push(managerCard);
+    }
+
+    
+
+
+}
+
+
 
 // String literal to Generate the Team Page
-const genTeamPage = function () {
+const genTeamPage = function (cards) {
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -115,11 +177,6 @@ const genTeamPage = function () {
         <div class="flex justify-center mt-22 m-20">
           <h1 class="text-8xl font-sans">Meet The Team!</h1>
         </div>
-        <div class="flex-col text-center">
-          <h2 class="text-5xl font-bold mb-5">
-            Meet our team of <span>${number}</span> creatives that will build your desired application. 
-          </h2>
-        </div>
     
         <!-- card container for employees -->
         <div class="flex justify-around flex-wrap my-18 mx-18 lg:m-38">
@@ -130,4 +187,5 @@ const genTeamPage = function () {
 `;
 };
 
-module.exports = createTeamHTML;
+
+module.exports = teamGenHTML;
