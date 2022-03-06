@@ -1,3 +1,8 @@
+// Classes for the team
+const Manager = require("./lib/Manager");
+const Intern = require("./lib/Intern");
+const Engineer = require("./lib/Engineer");
+
 // Node dependencies
 const inquirer = require("inquirer");
 const fs = require("fs");
@@ -51,6 +56,20 @@ const managerInfo = () => {
             },
         },
 
-        
+        {
+            name: "managersOfficeNumber",
+            message: "Enter your managers office number",
+            type: "input",
+            validate: (input) => {
+                if (""(!input)) {
+                    return "You must enter your managers office number";
+                } else {
+                    return true;
+                }
+            },
+        },
+    ])
+
+
 
 }
