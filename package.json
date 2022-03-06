@@ -2,5 +2,22 @@
   "dependencies": {
     "inquirer": "^8.2.0",
     "jest": "^27.5.1"
+  },
+
+  "name": "generate-your-team",
+  "description": "The task is to build a node.js application that genertaes a team from cmd line input and utilizes jest for testing purposes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.0.23"
+  },
+  "scripts": {
+    "test": "jest",
+    "build-css": "tailwindcss build style.css -D dist/style.css"
   }
 }
+
