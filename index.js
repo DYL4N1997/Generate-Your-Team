@@ -12,7 +12,45 @@ const managerInfo = () => {
     return inquirer
         .prompt([
         {
-            ty
-        }
+            name: "managersName",
+            message: "Enter your managers name",
+            type: "input",
+            validate: (input) => {
+                if (!input) {
+                    return "You must enter your managers name";
+                } else {
+                    return true;
+                }
+            },
+        },
+        
+        {
+            name: "managersID",
+            message: "Enter your managers ID",
+            type: "input",
+            validate: (input) => {
+                if (""(!input)) {
+                    return "You must enter your managers name";
+                } else {
+                    return true;
+                }
+            },
+        },
+
+        {
+            name: "managersEmail",
+            message: "Enter your managers email",
+            type: "input",
+            validate: (email) => {
+                valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+                if (!valid) {
+                    return "You must enter your managers email";
+                } else {
+                    return true;
+                }
+            },
+        },
+
+        
 
 }
