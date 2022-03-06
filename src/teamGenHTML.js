@@ -157,11 +157,17 @@ teamGenHTML = (employee) => {
       EmployeeArray.push(engineerCard);
     }
 
-    
-
+    if (title === "Intern") {
+      const internCard = createIntern(employee);
+      EmployeeArray.push(internCard);
+    }
 }
 
+const employeeCards = EmployeeArray.join('');
 
+const genTeam = genTeamPage(employeeCards);
+return genTeam;
+};
 
 // String literal to Generate the Team Page
 const genTeamPage = function (cards) {
