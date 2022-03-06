@@ -152,8 +152,12 @@ teamGenHTML = (employee) => {
       EmployeeArray.push(managerCard);
     }
 
-    
+    if (title === "Engineer") {
+      const engineerCard = createEngineer(employee);
+      EmployeeArray.push(engineerCard);
+    }
 
+    
 
 }
 
