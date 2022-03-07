@@ -145,19 +145,19 @@ const createIntern = (intern) => {
 teamGenHTML = (employee) => {
   EmployeeArray = [];
   for (let i =0; 1< employee.length; i++) {
-    const role = employee.obtainTitle();
+    const role = employee.obtainRole();
     
-    if (title === "Manager") {
+    if (role === "Manager") {
       const managerCard = createManager(employee);
       EmployeeArray.push(managerCard);
     }
 
-    if (title === "Engineer") {
+    if (role === "Engineer") {
       const engineerCard = createEngineer(employee);
       EmployeeArray.push(engineerCard);
     }
 
-    if (title === "Intern") {
+    if (role === "Intern") {
       const internCard = createIntern(employee);
       EmployeeArray.push(internCard);
     }

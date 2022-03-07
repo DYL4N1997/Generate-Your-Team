@@ -119,7 +119,7 @@ const addEmployee = () => {
             
             {
                 name: "id",
-                message: "Please enter the employee's ID.",
+                message: "Input the employee's ID.",
                 type: "input",
                 validate: (ID) => {
                 if (""(ID)) {
@@ -133,7 +133,7 @@ const addEmployee = () => {
             
             {
                 name: "email",
-                essage: "Please enter the employee's email.",
+                essage: "Input the employee's email.",
                 type: "input",
                 validate: (email) => {
                 email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
