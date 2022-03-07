@@ -161,7 +161,11 @@ const addEmployee = () => {
             },
 
             {
-                    
+                name: "officeNumber",
+                message: "Enter manager's office number",
+                type: "inout"
+            {
+                
             }
         ])
 }
