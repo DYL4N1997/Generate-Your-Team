@@ -146,6 +146,22 @@ const addEmployee = () => {
             },
             },
 
+            {
+                name: "github",
+                message: "Enter github username",
+                type: "input",
+                when: (input) => input.role === "Engineer",
+                validate: (github) => {
+                if (!github) {
+                    return "You need to enter a github username";
+                } else {
+                    return true;
+                }
+            },
+            },
 
+            {
+                    
+            }
         ])
 }
