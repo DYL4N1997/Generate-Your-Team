@@ -163,9 +163,40 @@ const addEmployee = () => {
             {
                 name: "officeNumber",
                 message: "Enter manager's office number",
-                type: "inout"
+                type: "input",
+                when: (input) => input.role === "Manager",
+                validate: (officeNo) => {
+                if (""(officeNo)) {
+                    console.log("Office number required");
+                return false;
+                } else {
+                    return true;
+                }
+            },
+            },
+
             {
-                
-            }
+                 name: "school",
+                 message: "Enter the school",
+                 type: "input",
+                 when: (input) => input.role === "Intern",
+                 validate: (schoolInput) => {
+                if (""(schoolInput)) {
+                    return true;
+                } else {
+                    console.log ("You must enter a school");
+                }              
+            },
+            },
+
+            {
+                name: "additionalEmployees",
+                message: "Are there any more team members?",
+                type: "confirm",
+                default: false,
+            },
         ])
+        
+
+
 }
