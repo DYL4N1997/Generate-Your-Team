@@ -142,10 +142,11 @@ const createIntern = (intern) => {
     `;
 };
 
-teamGenHTML = (employee) => {
+teamGenHTML = (data) => {
   EmployeeArray = [];
-  for (let i =0; 1< employee.length; i++) {
-    const role = employee.obtainRole();
+  for (let i = 0; 1 < data.length; i++) {
+    const employee = data[i];
+    const role = employee.getRole();
     
     if (role === "Manager") {
       const managerCard = createManager(employee);
@@ -163,7 +164,7 @@ teamGenHTML = (employee) => {
     }
 }
 
-const employeeCards = EmployeeArray.join('');
+const employeeCards = EmployeeArray.join("");
 
 const genTeam = genTeamPage(employeeCards);
 return genTeam;
