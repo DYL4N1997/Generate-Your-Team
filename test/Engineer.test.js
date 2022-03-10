@@ -12,6 +12,7 @@ test("creates engineer object", () => {
 
   //   github
   expect(engineer.getGithub()).toBe(github);
+  
 
   //   get role
   expect(engineer.getRole()).toBe("Engineer");
