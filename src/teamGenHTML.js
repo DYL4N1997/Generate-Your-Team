@@ -143,35 +143,35 @@ const createIntern = (intern) => {
 };
 
 teamGenHTML = (data) => {
-  EmployeeArray = [];
+  pageArray = [];
   for (let i = 0; 1 < data.length; i++) {
     const employee = data[i];
     const role = employee.getRole();
     
     if (role === "Manager") {
       const managerCard = createManager(employee);
-      EmployeeArray.push(managerCard);
+      pageArray.push(managerCard);
     }
 
     if (role === "Engineer") {
       const engineerCard = createEngineer(employee);
-      EmployeeArray.push(engineerCard);
+      pageArray.push(engineerCard);
     }
 
     if (role === "Intern") {
       const internCard = createIntern(employee);
-      EmployeeArray.push(internCard);
+      pageArray.push(internCard);
     }
 }
 
-const employeeCards = EmployeeArray.join("");
+const employeeCards = pageArray.join("");
 
 const genTeam = genTeamPage(employeeCards);
 return genTeam;
-};
+}
 
 // String literal to Generate the Team Page
-const genTeamPage = function (cards) {
+const genTeamPage = function (employeeCards) {
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -191,12 +191,11 @@ const genTeamPage = function (cards) {
     
         <!-- card container for employees -->
         <div class="flex justify-around flex-wrap my-18 mx-18 lg:m-38">
-            ${cards}
+            ${employeeCards}
         </div>
         </body>
     </html>  
 `;
-};
-
+}
 
 module.exports = teamGenHTML;

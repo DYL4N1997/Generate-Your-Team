@@ -13,12 +13,12 @@ test("creates the employee object for test", () => {
 test("gets employee email", () => {
   const employee = new Employee("Dylan", "1", "dylan.metcalf15@gmail.com");
 
-  expect(employee.obtainEmail()).toBe("dylan.metcalf15@gmail.com");
+  expect(employee.getEmail()).toBe("dylan.metcalf15@gmail.com");
 });
 
 // gets employee role
 test("gets employee title", () => {
   const employee = new Employee("Dylan", "1", "dylan.metcalf15@gmail.com");
 
-  expect(employee.obtainRole()).toBe("Employee");
+  expect(employee.getRole()).toBe("Employee");
 });
