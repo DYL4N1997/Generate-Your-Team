@@ -144,7 +144,7 @@ const createIntern = (intern) => {
 
 teamGenHTML = (data) => {
   pageArray = [];
-  for (let i = 0; 1 < data.length; i++) {
+  for (let i = 0; i < data.length; i++) {
     const employee = data[i];
     const role = employee.getRole();
     
@@ -198,5 +198,5 @@ const genTeamPage = function (employeeCards) {
 `;
 };
 
-export default teamGenHTML;
+module.exports = teamGenHTML;
 

@@ -8,7 +8,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 // Link to Team Generation HTML
-const teamGenHTML = require("./src/teamGenHTML").default;
+const teamGenHTML = require("./src/teamGenHTML");
 
 // Array for the team
 const teamArray = [];
