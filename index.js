@@ -1,14 +1,14 @@
 // Classes for the team
-const Manager = require("./lib/manager");
-const Intern = require("./lib/intern");
-const Engineer = require("./lib/engineer");
+const Manager = require("./lib/Manager");
+const Intern = require("./lib/Intern");
+const Engineer = require("./lib/Engineer");
 
 // Node dependencies
 const inquirer = require("inquirer");
 const fs = require("fs");
 
 // Link to Team Generation HTML
-const teamGenHTML = require("./src/teamGenHTML");
+const teamGenHTML = require("./src/teamGenHTML").default;
 
 // Array for the team
 const teamArray = [];
@@ -24,7 +24,7 @@ const addManager = () => {
     return inquirer
         .prompt([
         {
-            name: "name",
+            name: "managerName",
             message: "Enter your managers name",
             type: "input",
             validate: (input) => {
@@ -37,7 +37,7 @@ const addManager = () => {
         },
         
         {
-            name: "id",
+            name: "managerId",
             message: "Enter your managers ID",
             type: "input",
             validate: (input) => {
@@ -50,7 +50,7 @@ const addManager = () => {
         },
 
         {
-            name: "email",
+            name: "managerEmail",
             message: "Enter your managers email",
             type: "input",
             validate: (email) => {
@@ -64,11 +64,11 @@ const addManager = () => {
         },
 
         {
-            name: "officeNumber",
+            name: "managerOfficeNumber",
             message: "Enter your managers office number",
             type: "input",
-            validate: (nameInput) => {
-                if (isNaN(nameInput)) {
+            validate: (officeNo) => {
+                if (isNaN(officeNo)) {
                     return "You must enter your managers office number";
                 } else {
                     return true;
@@ -78,8 +78,8 @@ const addManager = () => {
     ])
   
     .then((managerResponses) => {
-        const { name, id, email, officeNumber } = managerResponses;
-        const manager = new Manager( name, id, email, officeNumber );
+        const { managerName, managerId, managerEmail, managerOfficeNumber } = managerResponses;
+        const manager = new Manager( managerName, managerId, managerEmail, managerOfficeNumber );
         
         // Push data to array
         teamArray.push(manager);
@@ -167,8 +167,8 @@ const addEmployee = () => {
                  message: "Enter the school",
                  type: "input",
                  when: (input) => input.role === "Intern",
-                 validate: (nameInput) => {
-                if (nameInput) {
+                 validate: (schoolInput) => {
+                if (schoolInput) {
                     return true;
                 } else {
                     console.log ("You must enter a school");
@@ -220,8 +220,8 @@ const addEmployee = () => {
 };
 
 // function to generate HTML page file using file system
-const writeFile = (data) => {
-    fs.writeFile("./dist/meetTheTeam.html", data, (err) => {
+const writeFile = data => {
+    fs.writeFile("./dist/meetTheTeam.html", data, err => {
       // if there is an error
       if (err) {
         console.log(err);

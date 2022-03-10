@@ -168,7 +168,7 @@ const employeeCards = pageArray.join("");
 
 const genTeam = genTeamPage(employeeCards);
 return genTeam;
-}
+};
 
 // String literal to Generate the Team Page
 const genTeamPage = function (employeeCards) {
@@ -196,6 +196,7 @@ const genTeamPage = function (employeeCards) {
         </body>
     </html>  
 `;
-}
+};
 
-module.exports = teamGenHTML;
+export default teamGenHTML;
+
