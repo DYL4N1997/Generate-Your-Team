@@ -8,7 +8,7 @@ const createManager = (manager) => {
         <div class="card-square-pink">
           <img
             class="justify-center"
-            src="....."
+            src="/assets/manager.png"
             alt=""
           />
         </div>
@@ -54,7 +54,7 @@ const createEngineer = (engineer) => {
             <div class="card-square-pink">
               <img
                 class="justify-center"
-                src="....."
+                src="/assets/programmer.png"
                 alt=""
               />
             </div>
@@ -69,6 +69,7 @@ const createEngineer = (engineer) => {
           </p>
           <!-- container -->
           <div class="pt-4">
+        
             <!-- id -->
             <div class="flex justify-between my-2">
               <p class="font-bold text-base">ID:</p>
@@ -102,7 +103,7 @@ const createIntern = (intern) => {
             <div class="card-square-pink">
               <img
                 class="justify-center"
-                src="....."
+                src="/assets/graduate.png"
                 alt=""
               />
             </div>

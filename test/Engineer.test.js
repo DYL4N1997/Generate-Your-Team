@@ -10,10 +10,7 @@ test("creates engineer object", () => {
   expect(engineer.id).toEqual("3");
   expect(engineer.email).toEqual("nigelthornberry@gmail.com");
 
-  //   github
   expect(engineer.getGithub()).toBe(github);
   
-
-  //   get role
   expect(engineer.getRole()).toBe("Engineer");
 });
