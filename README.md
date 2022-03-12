@@ -12,8 +12,8 @@ I require a web page for my team that is quick to generate and edit, so clients 
 # Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Testing-Video](#testing-video-guide)
-- [Generator-Video-Guide](#generator-video)
+- [Testing Video](#testing-video)
+- [Generator Video Guide](#generator-video)
 - [Questions](#questions)
 
 # Technologies Used
