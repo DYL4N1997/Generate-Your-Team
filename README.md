@@ -9,14 +9,12 @@ I require a web page for my team that is quick to generate and edit, so clients 
 
 # Image of Product
 
-
 # Table of Contents
-- Techologies Used
-- Installation
-- Usage
-- Testing Video
-- Generator Video Guide
-- Questions
+- [Installation](#installation)
+- [Usage](#usage)
+- [Testing-Video](#testing-video-guide)
+- [Generator-Video-Guide](#generator-video)
+- [Questions](#questions)
 
 # Technologies Used
 - HTML
@@ -28,21 +26,21 @@ I require a web page for my team that is quick to generate and edit, so clients 
 
 # Installation
 - Clone or fork the repository
-https://github.com/DYL4N1997/Generate-Your-Team
+'https://github.com/DYL4N1997/Generate-Your-Team'
 
 - Navigate to the correct directory once cloned
-cd Generate-Your-Team
+'cd Generate-Your-Team'
 
 - Install relevant node dependencies
-npm i 
+'npm i' 
 
 - Trigger/run the app
-node index.js
+'node index.js'
 
 # Usage
 The application can be used by entering node index.js and then inputing repsonses into the following prompts.
 
-# Testing Video Guide
+# Testing Video
 
 # Generator Video Guide
 
