@@ -12,8 +12,8 @@ I require a web page for my team that is quick to generate and edit, so clients 
 # Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Testing Video](#testing-video)
-- [Generator Video Guide](#generator-video)
+- [Testing](#testing)
+- [Guide](#guide)
 - [Questions](#questions)
 
 # Technologies Used
@@ -40,9 +40,9 @@ I require a web page for my team that is quick to generate and edit, so clients 
 # Usage
 The application can be used by entering node index.js and then inputing repsonses into the following prompts.
 
-# Testing Video
+# Testing
 
-# Generator Video Guide
+# Guide
 
 # Questions
 If you have any questions related to this project, you can email me @dylan.metcalf15@gmail.com
